@@ -1,0 +1,4 @@
+transformers==4.38.2
+torch==2.2.1
+gradio==4.19.2
+gradio_client==0.10.1

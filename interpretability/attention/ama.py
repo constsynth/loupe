@@ -1,0 +1,1 @@
+#TODO: provide default AMA (attention mask analyser) class
