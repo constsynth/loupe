@@ -21,6 +21,10 @@ class SAE(nn.Module):
         ).to(device)
 
     @staticmethod
+    def cleanup_memory():
+        torch.cuda.empty_cache()
+
+    @staticmethod
     def create_sae(
         in_hidden_state_size: int,
         sparse_hidden_state_size: int,
@@ -30,13 +34,15 @@ class SAE(nn.Module):
         sae = nn.Sequential(
             nn.Linear(
                 in_hidden_state_size,
-                sparse_hidden_state_size
+                sparse_hidden_state_size,
+                dtype=torch.bfloat16
             ),
-            nn.BatchNorm1d(sparse_hidden_state_size),
+            nn.BatchNorm1d(sparse_hidden_state_size, dtype=torch.bfloat16),
             nn.ReLU(),
             nn.Linear(
                 sparse_hidden_state_size,
-                in_hidden_state_size
+                in_hidden_state_size,
+                dtype=torch.bfloat16
             )
         )
         return sae
@@ -44,11 +50,13 @@ class SAE(nn.Module):
     def forward(
         self,
         hidden_state: torch.Tensor
-    ) -> torch.tensor:
+    ) -> torch.Tensor:
         
         """
         Arguments:
             hidden_state: torch.Tensor with hidden states
         """
-        return self.sae(hidden_state)
+        reconstructed_hidden_states = self.sae(hidden_state)
+        self.cleanup_memory()
+        return reconstructed_hidden_states
     
