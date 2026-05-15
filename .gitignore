@@ -1,6 +1,8 @@
-*.*
-
 !*.py
 !*.ipynb
 !*.md
 !*.txt
+!*.docx
+
+__pycache__
+.vscode
