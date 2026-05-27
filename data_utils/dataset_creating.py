@@ -1,16 +1,20 @@
-import csv
 import json
 import random
 import re
 import typing as tp
 from pathlib import Path
 
+import pandas as pd
 from langchain.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import Runnable
 from langchain_community.llms.fake import FakeListLLM
 from sklearn.model_selection import train_test_split
+from tqdm import tqdm
 
+
+OPENROUTER_API_BASE = "https://openrouter.ai/api/v1"
+OPENROUTER_MODEL_NAME = "deepseek/deepseek-v4-flash"
 
 DATASET_COLUMNS = [
     "sample_id",
@@ -37,6 +41,19 @@ STATISTICAL_CHECKS = [
     "concept_separability_jsd_sep",
     "causal_selectivity_q",
 ]
+
+TARGET_TOKEN_PLACEHOLDERS = {
+    "answer",
+    "category",
+    "correct_fact",
+    "label",
+    "neutral_answer",
+    "numeric_answer",
+    "sentiment_label",
+    "target_marker",
+    "target_token",
+    "token",
+}
 
 DEFAULT_CONCEPTS = [
     {
@@ -118,24 +135,33 @@ GENERATION_PROMPT = PromptTemplate.from_template(
     """
 You generate a synthetic dataset for SAE interpretability experiments in a transformer language model.
 
-Dataset theme: {dataset_theme}
-Language: {language}
-Concept label: {concept_label}
-Concept description: {concept_description}
-Domain: {domain}
-Prompt type: {prompt_type}
-Target behavior for intervention tests: {target_behavior}
-Target token or target marker: {target_token}
-Feature hypothesis: {feature_hypothesis}
-Number of samples: {n_samples}
+The generated dataset has the following characteristics:
+- Dataset theme: {dataset_theme}
+- Language: {language}
+- Concept label: {concept_label}
+- Concept description: {concept_description}
+- Domain: {domain}
+- Prompt type: {prompt_type}
+- Target behavior for intervention tests: {target_behavior}
+- Feature hypothesis: {feature_hypothesis}
+- Number of samples: {n_samples}
 
-Return only JSON Lines. Each line must be a valid JSON object with keys:
-text, expected_answer, concept_label, concept_description, domain, prompt_type,
-language, target_behavior, target_token, intervention_feature_hypothesis, metadata_json.
+Return only JSON Lines. Each line must be a valid JSON object with exactly these keys:
+text, expected_answer, target_token, metadata_json.
 
-The field text must be the exact prompt later passed to the LLM for hidden-state extraction.
-The field metadata_json must be a compact JSON object encoded as a string and may include
-difficulty, ambiguity_level, expected_activation_focus, and intervention_note.
+Field requirements:
+- text: the exact prompt later passed to the LLM for hidden-state extraction.
+- expected_answer: the concise correct or desired answer for text.
+- target_token: a concrete surface token that can be tracked in the generated answer
+  or prompt. It must be an actual token such as "6", "because", "doctor", "fix",
+  or "positive", not a category, placeholder, marker, or label such as
+  "correct_fact", "numeric_answer", "target_marker", or "sentiment_label".
+- metadata_json: a compact JSON object encoded as a string. It may include
+  difficulty, ambiguity_level, expected_activation_focus, and intervention_note.
+
+Do not return fields that are already provided by the concept configuration:
+concept_label, concept_description, domain, prompt_type, language, target_behavior,
+or intervention_feature_hypothesis.
 Do not include markdown or comments.
 """
 )
@@ -159,8 +185,13 @@ def create_synthetic_dataset(
     output_dir: str | Path = "data",
     concepts: list[dict[str, str]] | None = None,
     llm: Runnable | None = None,
+    openrouter_api_key: str | None = None,
+    openrouter_model: str = OPENROUTER_MODEL_NAME,
+    openrouter_api_base: str = OPENROUTER_API_BASE,
+    temperature: float = 0.7,
     language: str = "ru",
     seed: int = 42,
+    show_progress: bool = True,
 ) -> Path:
     """
     Generate a synthetic CSV dataset for SAE experiments.
@@ -170,9 +201,13 @@ def create_synthetic_dataset(
     reconstruction quality, distribution similarity, sparsity, concept separability,
     and causal intervention selectivity.
 
-    If `llm` is not provided, a deterministic `FakeListLLM` from
-    `langchain_community` is used so examples can run without external API keys.
-    For real generation, pass any LangChain-compatible LLM or Runnable.
+    If `openrouter_api_key` is provided, generation uses OpenRouter through
+    `langchain_openai.ChatOpenAI` with the default model
+    `deepseek/deepseek-v4-flash`. If both `llm` and `openrouter_api_key` are not
+    provided, a deterministic `FakeListLLM` from `langchain_community` is used
+    so examples can run without external API keys. For custom generation, pass
+    any LangChain-compatible LLM or Runnable through `llm`. Set
+    `show_progress=False` to disable the tqdm progress bar.
     """
     if samples_per_concept < 1:
         raise ValueError("samples_per_concept must be at least 1")
@@ -180,6 +215,14 @@ def create_synthetic_dataset(
     concepts = concepts or DEFAULT_CONCEPTS
     output_path = dataset_path(dataset_theme, output_dir)
     output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    if llm is None and openrouter_api_key:
+        llm = _make_openrouter_llm(
+            api_key=openrouter_api_key,
+            model=openrouter_model,
+            api_base=openrouter_api_base,
+            temperature=temperature,
+        )
 
     if llm is None:
         responses = [
@@ -197,20 +240,22 @@ def create_synthetic_dataset(
     chain = GENERATION_PROMPT | llm | StrOutputParser()
     rows: list[dict[str, str]] = []
 
-    for concept in concepts:
+    concept_iterator = tqdm(
+        concepts,
+        desc="Generating synthetic dataset",
+        unit="concept",
+        disable=not show_progress,
+    )
+
+    for concept in concept_iterator:
+        concept_iterator.set_postfix(concept=concept["label"])
         raw_output = chain.invoke(
-            {
-                "dataset_theme": dataset_theme,
-                "language": language,
-                "concept_label": concept["label"],
-                "concept_description": concept["description"],
-                "domain": concept["domain"],
-                "prompt_type": concept["prompt_type"],
-                "target_behavior": concept["target_behavior"],
-                "target_token": concept["target_token"],
-                "feature_hypothesis": concept["feature_hypothesis"],
-                "n_samples": samples_per_concept,
-            }
+            _make_generation_inputs(
+                dataset_theme=dataset_theme,
+                language=language,
+                concept=concept,
+                samples_per_concept=samples_per_concept,
+            )
         )
         rows.extend(
             _normalize_records(
@@ -221,12 +266,7 @@ def create_synthetic_dataset(
             )
         )
 
-    random.Random(seed).shuffle(rows)
-    for idx, row in enumerate(rows):
-        row["sample_id"] = f"{sanitize_dataset_theme(dataset_theme)}_{idx:05d}"
-        row["dataset_theme"] = sanitize_dataset_theme(dataset_theme)
-        row["statistical_checks"] = ";".join(STATISTICAL_CHECKS)
-
+    _finalize_rows(rows=rows, dataset_theme=dataset_theme, seed=seed)
     _write_csv(output_path, rows)
     return output_path
 
@@ -275,6 +315,62 @@ def split_dataset(
     return train_path, test_path
 
 
+def _make_openrouter_llm(
+    api_key: str,
+    model: str,
+    api_base: str,
+    temperature: float,
+) -> Runnable:
+    """Create an OpenRouter-backed LangChain chat model for dataset generation."""
+    try:
+        from langchain_openai import ChatOpenAI
+    except ImportError as exc:
+        raise ImportError(
+            "Install langchain-openai to use OpenRouter generation: "
+            "`pip install langchain-openai`."
+        ) from exc
+
+    return ChatOpenAI(
+        api_key=api_key,
+        base_url=api_base,
+        model=model,
+        temperature=temperature,
+        max_retries=2,
+    )
+
+
+def _make_generation_inputs(
+    dataset_theme: str,
+    language: str,
+    concept: dict[str, str],
+    samples_per_concept: int,
+) -> dict[str, tp.Any]:
+    return {
+        "dataset_theme": dataset_theme,
+        "language": language,
+        "concept_label": concept["label"],
+        "concept_description": concept["description"],
+        "domain": concept["domain"],
+        "prompt_type": concept["prompt_type"],
+        "target_behavior": concept["target_behavior"],
+        "target_token": concept["target_token"],
+        "feature_hypothesis": concept["feature_hypothesis"],
+        "n_samples": samples_per_concept,
+    }
+
+
+def _finalize_rows(
+    rows: list[dict[str, str]],
+    dataset_theme: str,
+    seed: int,
+) -> None:
+    random.Random(seed).shuffle(rows)
+    for idx, row in enumerate(rows):
+        row["sample_id"] = f"{sanitize_dataset_theme(dataset_theme)}_{idx:05d}"
+        row["dataset_theme"] = sanitize_dataset_theme(dataset_theme)
+        row["statistical_checks"] = ";".join(STATISTICAL_CHECKS)
+
+
 def _normalize_records(
     raw_output: str,
     dataset_theme: str,
@@ -284,6 +380,7 @@ def _normalize_records(
     records = _parse_json_records(raw_output)
     normalized = []
     for record in records:
+        expected_answer = str(record.get("expected_answer", "")).strip()
         metadata = record.get("metadata_json", {})
         if isinstance(metadata, dict):
             metadata = json.dumps(metadata, ensure_ascii=False, sort_keys=True)
@@ -293,22 +390,19 @@ def _normalize_records(
                 "sample_id": "",
                 "dataset_theme": sanitize_dataset_theme(dataset_theme),
                 "text": str(record.get("text", "")).strip(),
-                "expected_answer": str(record.get("expected_answer", "")).strip(),
-                "concept_label": str(record.get("concept_label") or concept["label"]),
-                "concept_description": str(
-                    record.get("concept_description") or concept["description"]
+                "expected_answer": expected_answer,
+                "concept_label": concept["label"],
+                "concept_description": concept["description"],
+                "domain": concept["domain"],
+                "prompt_type": concept["prompt_type"],
+                "language": language,
+                "target_behavior": concept["target_behavior"],
+                "target_token": _normalize_target_token(
+                    token=record.get("target_token"),
+                    expected_answer=expected_answer,
+                    fallback=concept["target_token"],
                 ),
-                "domain": str(record.get("domain") or concept["domain"]),
-                "prompt_type": str(record.get("prompt_type") or concept["prompt_type"]),
-                "language": str(record.get("language") or language),
-                "target_behavior": str(
-                    record.get("target_behavior") or concept["target_behavior"]
-                ),
-                "target_token": str(record.get("target_token") or concept["target_token"]),
-                "intervention_feature_hypothesis": str(
-                    record.get("intervention_feature_hypothesis")
-                    or concept["feature_hypothesis"]
-                ),
+                "intervention_feature_hypothesis": concept["feature_hypothesis"],
                 "statistical_checks": "",
                 "metadata_json": str(metadata),
             }
@@ -317,8 +411,41 @@ def _normalize_records(
     return [row for row in normalized if row["text"]]
 
 
+def _normalize_target_token(
+    token: tp.Any,
+    expected_answer: str,
+    fallback: str,
+) -> str:
+    candidate = str(token or "").strip().strip("\"'")
+    if _is_concrete_target_token(candidate):
+        return candidate
+
+    fallback_candidate = str(fallback or "").strip().strip("\"'")
+    if _is_concrete_target_token(fallback_candidate):
+        return fallback_candidate
+
+    answer_token = _first_surface_token(expected_answer)
+    return answer_token or fallback_candidate
+
+
+def _is_concrete_target_token(token: str) -> bool:
+    token = token.strip().strip("\"'")
+    if not token:
+        return False
+    if token.lower() in TARGET_TOKEN_PLACEHOLDERS:
+        return False
+    if "_" in token or any(char.isspace() for char in token):
+        return False
+    return len(token) <= 40
+
+
+def _first_surface_token(text: str) -> str:
+    match = re.search(r"[\w+-]+", text, flags=re.UNICODE)
+    return match.group(0) if match else ""
+
+
 def _parse_json_records(raw_output: str) -> list[dict[str, tp.Any]]:
-    raw_output = raw_output.strip()
+    raw_output = _strip_json_markdown(raw_output)
     if not raw_output:
         return []
 
@@ -343,6 +470,18 @@ def _parse_json_records(raw_output: str) -> list[dict[str, tp.Any]]:
         if isinstance(parsed_line, dict):
             records.append(parsed_line)
     return records
+
+
+def _strip_json_markdown(raw_output: str) -> str:
+    raw_output = raw_output.strip()
+    if raw_output.startswith("```"):
+        lines = raw_output.splitlines()
+        if lines and lines[0].startswith("```"):
+            lines = lines[1:]
+        if lines and lines[-1].strip() == "```":
+            lines = lines[:-1]
+        raw_output = "\n".join(lines).strip()
+    return raw_output
 
 
 def _make_offline_jsonl_response(
@@ -458,15 +597,15 @@ def _make_offline_record(
 
 def _write_csv(path: Path, rows: list[dict[str, str]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", newline="", encoding="utf-8") as csv_file:
-        writer = csv.DictWriter(csv_file, fieldnames=DATASET_COLUMNS)
-        writer.writeheader()
-        writer.writerows(rows)
+    pd.DataFrame(rows, columns=DATASET_COLUMNS).to_csv(
+        path,
+        index=False,
+        encoding="utf-8",
+    )
 
 
 def _read_csv(path: Path) -> list[dict[str, str]]:
-    with path.open("r", newline="", encoding="utf-8") as csv_file:
-        return list(csv.DictReader(csv_file))
+    return pd.read_csv(path, dtype=str).fillna("").to_dict("records")
 
 
 def _theme_from_dataset_path(path: Path) -> str:
