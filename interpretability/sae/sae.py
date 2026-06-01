@@ -79,7 +79,6 @@ class SAE(nn.Module):
             dtype=dtype,
             use_batch_norm=use_batch_norm,
         )
-        self.sae = nn.Sequential(self.encoder, self.decoder)
         self.to(device=device)
 
     @staticmethod
@@ -141,33 +140,6 @@ class SAE(nn.Module):
             dtype=dtype,
         )
         return nn.Sequential(*encoder_layers), decoder
-
-    @staticmethod
-    def create_sae(
-        in_hidden_state_size: int,
-        sparse_hidden_state_size: int,
-        sparsity_factor: int | None = None,
-        dtype: torch.dtype = torch.bfloat16,
-        use_batch_norm: bool = True,
-    ) -> nn.Sequential:
-        """
-        Backward-compatible constructor for a full sequential SAE.
-
-        Prefer constructing `SAE` and using its explicit `encoder` and `decoder`
-        attributes for experiments.
-        """
-        sparse_hidden_state_size = SAE._resolve_sparse_hidden_state_size(
-            in_hidden_state_size,
-            sparse_hidden_state_size,
-            sparsity_factor,
-        )
-        encoder, decoder = SAE.create_encoder_decoder(
-            in_hidden_state_size,
-            sparse_hidden_state_size,
-            dtype=dtype,
-            use_batch_norm=use_batch_norm,
-        )
-        return nn.Sequential(encoder, decoder)
 
     def _flatten_hidden_state(self, hidden_state: torch.Tensor) -> tuple[torch.Tensor, torch.Size]:
         if hidden_state.shape[-1] != self.in_hidden_state_size:
@@ -250,8 +222,7 @@ class SAE(nn.Module):
             return_output: Return `SAEForwardOutput` with `h`, `z`, and `h_hat`.
 
         Returns:
-            By default, only reconstructed hidden states to keep old training
-            code compatible.
+            By default, only reconstructed hidden states.
         """
         latent_activation = self.encode(hidden_state)
         reconstructed_hidden_state = self.decode(latent_activation)
@@ -373,26 +344,21 @@ class SAE(nn.Module):
         latent_activation: torch.Tensor,
         feature_indices: int | list[int] | torch.Tensor,
         intervention_value: float = 1.0,
-        mode: str = "add",
         token_positions: int | list[int] | torch.Tensor | None = None,
     ) -> torch.Tensor:
         """
-        Modify selected SAE features in `z`.
+        Add a scalar value to selected SAE features in `z`.
 
         Args:
             latent_activation: Tensor with shape [..., latent].
             feature_indices: SAE feature indices to change.
             intervention_value: Scalar intervention magnitude.
-            mode: One of `add`, `set`, or `multiply`.
             token_positions: Optional token positions for tensors shaped
                 [batch, sequence, latent]. If omitted, all positions are changed.
 
         Returns:
             Modified latent activation `z_prime`.
         """
-        if mode not in {"add", "set", "multiply"}:
-            raise ValueError("mode must be one of: add, set, multiply")
-
         feature_indices = self._normalize_indices(
             feature_indices,
             upper_bound=latent_activation.shape[-1],
@@ -421,12 +387,7 @@ class SAE(nn.Module):
                     raise ValueError("token_positions require latent shape [batch, sequence, latent]")
                 mask[:, token_positions, feature_idx] = True
 
-        if mode == "add":
-            modified_latent[mask] = modified_latent[mask] + intervention_value
-        elif mode == "set":
-            modified_latent[mask] = intervention_value
-        else:
-            modified_latent[mask] = modified_latent[mask] * intervention_value
+        modified_latent[mask] = modified_latent[mask] + intervention_value
 
         return modified_latent
 
@@ -435,7 +396,6 @@ class SAE(nn.Module):
         hidden_state: torch.Tensor,
         feature_indices: int | list[int] | torch.Tensor,
         intervention_value: float = 1.0,
-        mode: str = "add",
         token_positions: int | list[int] | torch.Tensor | None = None,
         return_latent: bool = False,
     ) -> torch.Tensor | tuple[torch.Tensor, torch.Tensor]:
@@ -450,7 +410,6 @@ class SAE(nn.Module):
             latent_activation=latent_activation,
             feature_indices=feature_indices,
             intervention_value=intervention_value,
-            mode=mode,
             token_positions=token_positions,
         )
         modified_hidden_state = self.decode(modified_latent)
@@ -486,6 +445,31 @@ class SAE(nn.Module):
         if normalize:
             directions = directions / directions.norm(dim=-1, keepdim=True).clamp_min(eps)
         return directions
+
+    def decoder_direction_for_feature(
+        self,
+        feature_indices: int | list[int] | torch.Tensor,
+        intervention_value: float = 1.0,
+        normalize: bool = False,
+        eps: float = 1e-8,
+    ) -> torch.Tensor:
+        """
+        Return the combined decoder direction for additive SAE steering.
+
+        For a linear decoder, changing selected latent features as
+        `z_prime_j = z_j + alpha` changes the decoded activation by
+        `alpha * W_dec[:, j]`. For multiple features this method returns the
+        sum of their decoder directions with the same scalar coefficient.
+
+        Returns:
+            Tensor with shape [hidden].
+        """
+        directions = self.decoder_directions(
+            feature_indices=feature_indices,
+            normalize=normalize,
+            eps=eps,
+        )
+        return directions.sum(dim=0) * intervention_value
 
     @staticmethod
     def top_activated_features(

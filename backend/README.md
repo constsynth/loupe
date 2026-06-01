@@ -16,6 +16,9 @@ The backend uses the existing research modules:
 - `interpretability.sae.sae.SAE` for `h -> z -> h_hat`, reconstruction metrics, sparsity metrics and latent interventions;
 - `interpretability.sae.feature_analysis` semantics for token/concept-level feature attribution.
 
+For `POST /api/interventions`, selected SAE concept features are applied only
+as additive decoder directions on the hooked hidden state.
+
 Run from the repository root:
 
 ```bash
@@ -30,6 +33,10 @@ first `.pt` file found there. If no checkpoint exists, the default response is
 endpoints will fail until a real checkpoint path is provided.
 Use a SAE checkpoint trained for the selected model/layer; checkpoints from a
 different Qwen size can fail because hidden dimensions differ.
+
+Generation requests use the tokenizer chat template before calling the model.
+If `generation.system_prompt` is omitted, the backend uses:
+`You are Qwen, created by Alibaba Cloud. You are a helpful assistant.`
 
 The feature dashboard endpoint reads saved artifacts from
 `data/sae_feature_dashboard`. Generate them with

@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Any, Literal
+from typing import Any
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -9,6 +9,7 @@ from pydantic import BaseModel, ConfigDict, Field
 DEFAULT_MODEL_NAME = "Qwen/Qwen2.5-0.5B-Instruct"
 DEFAULT_LAYER_NAME = "model.layers.15"
 DEFAULT_DASHBOARD_DIR = "data/sae_feature_dashboard"
+DEFAULT_SYSTEM_PROMPT = "You are Qwen, created by Alibaba Cloud. You are a helpful assistant."
 
 
 def default_sae_checkpoint_path() -> str:
@@ -35,6 +36,7 @@ class GenerationSettings(LoupeBaseModel):
     do_sample: bool = False
     temperature: float | None = Field(default=None, gt=0.0, le=5.0)
     top_p: float | None = Field(default=None, gt=0.0, le=1.0)
+    system_prompt: str | None = DEFAULT_SYSTEM_PROMPT
 
 
 class ConceptSpec(LoupeBaseModel):
@@ -43,8 +45,7 @@ class ConceptSpec(LoupeBaseModel):
     id: str
     name: str | None = None
     feature_ids: list[int] = Field(default_factory=list)
-    mode: Literal["add", "set", "multiply", "boost", "suppress"] = "add"
-    strength: float = 1.0
+    strength: float = Field(default=1.0, ge=0.0, le=2.0)
 
 
 class AttributionRequest(LoupeBaseModel):
@@ -66,6 +67,7 @@ class TokenFeatureScore(LoupeBaseModel):
 
     feature_id: int
     activation: float
+    raw_activation: float | None = None
     concept_id: str | None = None
     concept_label: str | None = None
 
@@ -76,6 +78,7 @@ class TokenAttribution(LoupeBaseModel):
     text: str
     position: int
     activation: float
+    raw_activation: float | None = None
     feature_id: int
     concept_id: str | None = None
     concept_label: str | None = None
@@ -128,9 +131,8 @@ class InterventionRequest(LoupeBaseModel):
     generation: GenerationSettings = Field(default_factory=GenerationSettings)
     concepts: list[ConceptSpec] = Field(default_factory=list)
     feature_ids: list[int] = Field(default_factory=list)
-    mode: Literal["add", "set", "multiply", "boost", "suppress"] = "add"
-    strength: float = 1.0
-    token_positions: list[int] | None = Field(default_factory=lambda: [-1])
+    strength: float = Field(default=1.0, ge=0.0, le=2.0)
+    token_positions: list[int] | None = None
 
 
 class InterventionResponse(LoupeBaseModel):
@@ -142,7 +144,6 @@ class InterventionResponse(LoupeBaseModel):
     sae_checkpoint_path: str
     layer_name: str
     feature_ids: list[int]
-    mode: str
     intervention_value: float
     token_positions: list[int] | None
 

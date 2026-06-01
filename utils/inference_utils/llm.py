@@ -7,6 +7,9 @@ from interpretability.sae.sae import SAE
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 
+DEFAULT_SYSTEM_PROMPT = "You are Qwen, created by Alibaba Cloud. You are a helpful assistant."
+
+
 @dataclass
 class SAEInterventionConfig:
     """
@@ -18,7 +21,6 @@ class SAEInterventionConfig:
 
     feature_indices: int | tp.List[int] | torch.Tensor | None = None
     intervention_value: float = 1.0
-    mode: str = "add"
     token_positions: int | tp.List[int] | torch.Tensor | None = None
     enabled: bool = True
 
@@ -26,11 +28,11 @@ class SAEInterventionConfig:
 class LLM:
 
     def __init__(
-    self,
-    model_name_or_path: str,
-    device: str = 'cuda'
+        self,
+        model_name_or_path: str,
+        device: str = 'cuda',
     ) -> None:
-        self.device = device
+        self.device = self._resolve_device(device)
         self.model, self.tokenizer = self.create_model(
             model_name_or_path
         )
@@ -47,12 +49,19 @@ class LLM:
             torch.cuda.empty_cache()
 
     @staticmethod
+    def _resolve_device(device: str | torch.device) -> torch.device:
+        device = torch.device(device)
+        if device.type == "cuda" and not torch.cuda.is_available():
+            return torch.device("cpu")
+        return device
+
+    @staticmethod
     def create_model(
         model_name_or_path: str,
     ) -> tp.Tuple[AutoModelForCausalLM, AutoTokenizer]:
         model = AutoModelForCausalLM.from_pretrained(
             model_name_or_path,
-            torch_dtype='auto'
+            torch_dtype=torch.float32,
         )
         tokenizer = AutoTokenizer.from_pretrained(
             model_name_or_path
@@ -62,34 +71,107 @@ class LLM:
     def get_hidden_state(
         self,
         input_text: str | tp.List[str],
-        layer_name: str = None,
-        **generate_kwargs
+        layer_name: str | None = None,
+        return_tokens: bool = False,
+        valid_tokens_only: bool = False,
+        batch_size: int | None = None,
+        detach: bool = True,
+        move_to_cpu: bool = True,
+        **forward_kwargs,
     ) -> torch.Tensor:
         """
-        Returns torch.Tensor with a certain layer activations for input batch.
+        Return activations for a selected layer or the model's final hidden state.
+
+        Args:
+            input_text: Input string or batch of strings.
+            layer_name: Exact module name from `self.model.named_modules()`.
+            return_tokens: If True, return token activations with shape
+                [batch, sequence, hidden]. If False, return attention-mask mean
+                pooled activations with shape [batch, hidden].
+            valid_tokens_only: If True with `return_tokens=True`, return only
+                non-padding token activations with shape [valid_tokens, hidden].
+                This is the preferred mode for token-level SAE training.
+            batch_size: Optional number of input texts to process per forward
+                pass. Use this when extracting activations for large datasets to
+                avoid CUDA out-of-memory errors.
+            detach: Detach activations from autograd before returning.
+            move_to_cpu: Move activations to CPU before returning.
+
+        Returns:
+            Tensor with shape [batch, hidden], [batch, sequence, hidden], or
+            [valid_tokens, hidden] when `valid_tokens_only=True`.
         """
-        inputs = self.tokenizer(input_text, return_tensors="pt", truncation=True, padding=True).to(self.device)
-        # forward pass saving activations using `hook_fn`
-        hidden_states = []
-        hook_handle = None
-        def hook_fn(module, input, output):
-            hidden_state = self._extract_hidden_state_from_module_output(output)
-            hidden_states.append(hidden_state.mean(dim=1).detach().cpu()) # Mean pooling for all the tokens
-        if layer_name:
-            for name, module in self.model.named_modules():
-                if name == layer_name:
-                    hook_handle = module.register_forward_hook(hook_fn)
-                    break
-        else:
+        if batch_size is not None and batch_size <= 0:
+            raise ValueError("batch_size must be positive when provided")
+
+        input_batches = self._input_text_batches(input_text, batch_size)
+        hidden_state_batches: list[torch.Tensor] = []
+
+        def prepare_hidden_state(
+            hidden_state: torch.Tensor,
+            attention_mask: torch.Tensor,
+        ) -> torch.Tensor:
+            mask = attention_mask.to(device=hidden_state.device)
+            if return_tokens and valid_tokens_only:
+                hidden_state = hidden_state[mask].reshape(-1, hidden_state.shape[-1])
+            elif not return_tokens:
+                hidden_state = self._masked_mean_pool(hidden_state, mask)
+            if detach:
+                hidden_state = hidden_state.detach()
+            if move_to_cpu:
+                hidden_state = hidden_state.cpu()
+            return hidden_state
+
+        module = self._get_module(layer_name) if layer_name else None
+        if layer_name is None:
             warnings.warn("`layer_name` is None, `last_hidden_state` used")
-        with torch.no_grad():
-            _ = self.model(**inputs, output_hidden_states=True, **generate_kwargs)
-        if hook_handle is not None:
-            hook_handle.remove()
+
+        model_forward_kwargs = dict(forward_kwargs)
+        model_forward_kwargs.setdefault("output_hidden_states", layer_name is None)
+        model_forward_kwargs.setdefault("use_cache", False)
+
+        for input_batch in input_batches:
+            inputs = self.tokenizer(
+                input_batch,
+                return_tensors="pt",
+                truncation=True,
+                padding=True,
+            ).to(self.device)
+            attention_mask = inputs["attention_mask"].bool()
+            batch_hidden_states: list[torch.Tensor] = []
+            hook_handle = None
+
+            def hook_fn(module, input, output):
+                hidden_state = self._extract_hidden_state_from_module_output(output)
+                batch_hidden_states.append(prepare_hidden_state(hidden_state, attention_mask))
+
+            if module is not None:
+                hook_handle = module.register_forward_hook(hook_fn)
+
+            try:
+                with torch.no_grad():
+                    output = self.model(**inputs, **model_forward_kwargs)
+            finally:
+                if hook_handle is not None:
+                    hook_handle.remove()
+
+            if layer_name:
+                if not batch_hidden_states:
+                    raise ValueError(f"Layer did not produce hidden states: {layer_name}")
+                hidden_state_batches.append(batch_hidden_states[-1])
+            else:
+                hidden_state_batches.append(
+                    prepare_hidden_state(output.hidden_states[-1], attention_mask)
+                )
+            del inputs
+            self.cleanup_memory()
+
         self.cleanup_memory()
-        if layer_name and not hidden_states:
-            raise ValueError(f"Layer not found or did not produce hidden states: {layer_name}")
-        return hidden_states[-1] if layer_name else _.hidden_states[0].mean(dim=1).detach().cpu()
+        return self._concat_hidden_state_batches(
+            hidden_state_batches,
+            return_tokens=return_tokens,
+            valid_tokens_only=valid_tokens_only,
+        )
 
     def add_sae(
         self,
@@ -98,16 +180,15 @@ class LLM:
         layer_name: str | None = None,
         feature_indices: int | tp.List[int] | torch.Tensor | None = None,
         intervention_value: float = 1.0,
-        mode: str = "add",
         token_positions: int | tp.List[int] | torch.Tensor | None = None,
         enabled: bool = True,
     ) -> str:
         """
         Attach SAE to a transformer layer with an optional latent intervention.
 
-        During the hooked forward pass, the layer activation `h` is encoded into
-        SAE latents `z`, selected features are modified as `z_prime`, and the
-        decoded activation `h_prime` is passed to subsequent model layers.
+        During the hooked forward pass, selected SAE features are converted to
+        decoder directions and added to the layer activation before subsequent
+        model layers run.
 
         Args:
             sae: Trained SAE with `in_hidden_state_size` matching the hooked layer.
@@ -116,7 +197,6 @@ class LLM:
             feature_indices: SAE latent feature index or indices to intervene on.
                 If omitted, SAE reconstructs the activation without changing `z`.
             intervention_value: Scalar value for the intervention.
-            mode: `add`, `set`, or `multiply`.
             token_positions: Optional token positions for token-level activations.
             enabled: Whether the intervention hook is active immediately.
 
@@ -135,7 +215,6 @@ class LLM:
         config = SAEInterventionConfig(
             feature_indices=feature_indices,
             intervention_value=intervention_value,
-            mode=mode,
             token_positions=token_positions,
             enabled=enabled,
         )
@@ -157,13 +236,14 @@ class LLM:
                 if active_config.token_positions is not None and token_positions is None:
                     return output
 
-                modified_hidden_state = sae.intervene(
+                intervention_delta = self._additive_decoder_direction_delta(
+                    sae=sae,
                     hidden_state=hidden_state,
                     feature_indices=active_config.feature_indices,
                     intervention_value=active_config.intervention_value,
-                    mode=active_config.mode,
                     token_positions=token_positions,
                 )
+                modified_hidden_state = hidden_state + intervention_delta
 
             return self._replace_hidden_state_in_module_output(output, modified_hidden_state)
 
@@ -177,7 +257,6 @@ class LLM:
         layer_name: str,
         feature_indices: int | tp.List[int] | torch.Tensor | None = None,
         intervention_value: float | None = None,
-        mode: str | None = None,
         token_positions: int | tp.List[int] | torch.Tensor | None = None,
         enabled: bool | None = None,
     ) -> None:
@@ -190,8 +269,6 @@ class LLM:
             config.feature_indices = feature_indices
         if intervention_value is not None:
             config.intervention_value = intervention_value
-        if mode is not None:
-            config.mode = mode
         if token_positions is not None:
             config.token_positions = token_positions
         if enabled is not None:
@@ -288,6 +365,52 @@ class LLM:
         raise TypeError(f"Unsupported module output type for SAE intervention: {type(output)}")
 
     @staticmethod
+    def _masked_mean_pool(hidden_state: torch.Tensor, attention_mask: torch.Tensor) -> torch.Tensor:
+        """Mean-pool token activations over non-padding positions."""
+        weights = attention_mask.to(device=hidden_state.device, dtype=hidden_state.dtype).unsqueeze(-1)
+        return (hidden_state * weights).sum(dim=1) / weights.sum(dim=1).clamp_min(1.0)
+
+    @staticmethod
+    def _input_text_batches(
+        input_text: str | tp.List[str],
+        batch_size: int | None,
+    ) -> list[str | tp.List[str]]:
+        if isinstance(input_text, str):
+            return [input_text]
+        if batch_size is None:
+            return [input_text]
+        return [
+            input_text[start:start + batch_size]
+            for start in range(0, len(input_text), batch_size)
+        ]
+
+    @staticmethod
+    def _concat_hidden_state_batches(
+        hidden_state_batches: list[torch.Tensor],
+        return_tokens: bool,
+        valid_tokens_only: bool,
+    ) -> torch.Tensor:
+        if not hidden_state_batches:
+            raise ValueError("No hidden states were produced")
+
+        if return_tokens and not valid_tokens_only:
+            max_sequence_length = max(batch.shape[1] for batch in hidden_state_batches)
+            padded_batches = []
+            for batch in hidden_state_batches:
+                if batch.shape[1] == max_sequence_length:
+                    padded_batches.append(batch)
+                    continue
+                padding = batch.new_zeros(
+                    batch.shape[0],
+                    max_sequence_length - batch.shape[1],
+                    batch.shape[2],
+                )
+                padded_batches.append(torch.cat([batch, padding], dim=1))
+            hidden_state_batches = padded_batches
+
+        return torch.cat(hidden_state_batches, dim=0)
+
+    @staticmethod
     def _replace_hidden_state_in_module_output(output, hidden_state: torch.Tensor):
         if torch.is_tensor(output):
             return hidden_state
@@ -313,17 +436,103 @@ class LLM:
             return None
         return positions.to(device=hidden_state.device)
 
+    @staticmethod
+    def _additive_decoder_direction_delta(
+        sae: SAE,
+        hidden_state: torch.Tensor,
+        feature_indices: int | tp.List[int] | torch.Tensor,
+        intervention_value: float,
+        token_positions: int | tp.List[int] | torch.Tensor | None,
+    ) -> torch.Tensor:
+        """Return `alpha * W_dec[:, feature]` broadcast to hooked activations."""
+        direction = sae.decoder_direction_for_feature(
+            feature_indices=feature_indices,
+            intervention_value=intervention_value,
+        ).to(device=hidden_state.device, dtype=hidden_state.dtype)
+
+        if token_positions is None:
+            view_shape = (1,) * (hidden_state.ndim - 1) + (direction.shape[-1],)
+            return direction.reshape(view_shape).expand_as(hidden_state)
+
+        if hidden_state.ndim < 3:
+            raise ValueError("token_positions require hidden state shape [batch, sequence, hidden]")
+
+        delta = torch.zeros_like(hidden_state)
+        delta[:, token_positions, :] = direction
+        return delta
+
     def generate(
         self,
         input_text: str,
+        return_full_text: bool = False,
+        strip: bool = True,
+        input_max_length: int | None = None,
+        system_prompt: str | None = DEFAULT_SYSTEM_PROMPT,
+        use_chat_template: bool = True,
         **generate_kwargs
     ) -> str:
         """
-        Basic output generation method.
+        Generate text from a prompt.
+
+        Args:
+            input_text: Prompt text.
+            return_full_text: If True, return prompt plus completion. If False,
+                return only newly generated completion tokens.
+            strip: Strip leading/trailing whitespace from decoded text.
+            input_max_length: Optional tokenizer truncation length for the prompt.
+            system_prompt: Optional system message used with tokenizer chat template.
+            use_chat_template: If True, format the user prompt with the
+                tokenizer's chat template before generation.
+            **generate_kwargs: Arguments forwarded to `transformers.generate`.
+
+        Returns:
+            Decoded generated text.
         """
-        inputs = self.tokenizer(input_text, return_tensors="pt").to(self.device)
-        # Default generation settings, may be reinitiated via kwargs (max_length, temperature, num_beams etc.)
-        outputs = self.model.generate(**inputs, **generate_kwargs)
-        text = self.tokenizer.batch_decode(outputs, skip_special_tokens=True)[0]
+        model_input_text = self._format_generation_prompt(
+            input_text=input_text,
+            system_prompt=system_prompt,
+            use_chat_template=use_chat_template,
+        )
+        tokenizer_kwargs: dict[str, tp.Any] = {"return_tensors": "pt"}
+        if input_max_length is not None:
+            tokenizer_kwargs.update({"truncation": True, "max_length": input_max_length})
+        inputs = self.tokenizer(model_input_text, **tokenizer_kwargs).to(self.device)
+
+        pad_token_id = self.tokenizer.pad_token_id or self.tokenizer.eos_token_id
+        if pad_token_id is not None and "pad_token_id" not in generate_kwargs:
+            generate_kwargs["pad_token_id"] = pad_token_id
+
+        with torch.no_grad():
+            outputs = self.model.generate(**inputs, **generate_kwargs)
+        output_ids = outputs.sequences if hasattr(outputs, "sequences") else outputs
+        ids_to_decode = output_ids[0]
+        if not return_full_text:
+            prompt_length = inputs["input_ids"].shape[-1]
+            ids_to_decode = ids_to_decode[prompt_length:]
+
+        text = self.tokenizer.decode(ids_to_decode, skip_special_tokens=True)
         self.cleanup_memory()
-        return text
+        return text.strip() if strip else text
+
+    def _format_generation_prompt(
+        self,
+        input_text: str,
+        system_prompt: str | None,
+        use_chat_template: bool,
+    ) -> str:
+        if not use_chat_template:
+            return input_text
+
+        messages = []
+        if system_prompt:
+            messages.append({"role": "system", "content": system_prompt})
+        messages.append({"role": "user", "content": input_text})
+
+        try:
+            return self.tokenizer.apply_chat_template(
+                messages,
+                tokenize=False,
+                add_generation_prompt=True,
+            )
+        except (AttributeError, ValueError):
+            return input_text

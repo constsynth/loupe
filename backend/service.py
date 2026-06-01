@@ -100,10 +100,7 @@ class LoupeBackendService:
         if not feature_ids:
             raise ValueError("At least one intervention feature id is required")
 
-        mode, intervention_value = self._resolve_intervention_mode(
-            mode=request.mode,
-            strength=request.strength,
-        )
+        intervention_value = self._resolve_intervention_strength(request.strength)
 
         baseline_text = self._generate_completion(llm, request.prompt, request.generation)
         layer_handle = None
@@ -113,7 +110,6 @@ class LoupeBackendService:
                 layer_name=request.layer_name,
                 feature_indices=feature_ids,
                 intervention_value=intervention_value,
-                mode=mode,
                 token_positions=request.token_positions,
             )
             intervened_text = self._generate_completion(llm, request.prompt, request.generation)
@@ -128,7 +124,6 @@ class LoupeBackendService:
             sae_checkpoint_path=request.sae_checkpoint_path,
             layer_name=request.layer_name,
             feature_ids=feature_ids,
-            mode=mode,
             intervention_value=intervention_value,
             token_positions=request.token_positions,
         )
@@ -233,6 +228,7 @@ class LoupeBackendService:
             prompt,
             input_max_length=settings.max_length,
             return_full_text=False,
+            system_prompt=settings.system_prompt,
             **self._generation_kwargs(settings),
         )
 
@@ -389,39 +385,83 @@ class LoupeBackendService:
         concept_lookup: dict[int, tuple[str, str | None]],
     ) -> list[TokenAttribution]:
         valid_positions = attention_mask[0].nonzero(as_tuple=False).flatten().tolist()
-        output: list[TokenAttribution] = []
+        raw_rows: list[dict[str, tp.Any]] = []
+        primary_raw_activations: list[float] = []
         for position in valid_positions:
             token_latent = latent[0, position].float().abs()
             values, indices = torch.topk(
                 token_latent,
                 k=min(top_k_token_features, token_latent.numel()),
             )
-            top_features = []
+            top_features: list[dict[str, tp.Any]] = []
             for feature_id_tensor, value_tensor in zip(indices, values):
                 feature_id = int(feature_id_tensor.item())
                 concept_id, concept_label = concept_lookup.get(feature_id, (None, None))
-                top_features.append(
-                    TokenFeatureScore(
-                        feature_id=feature_id,
-                        activation=float(value_tensor.item()),
-                        concept_id=concept_id,
-                        concept_label=concept_label,
-                    )
-                )
+                top_features.append({
+                    "feature_id": feature_id,
+                    "raw_activation": float(value_tensor.item()),
+                    "concept_id": concept_id,
+                    "concept_label": concept_label,
+                })
 
             primary = top_features[0]
+            primary_raw_activations.append(primary["raw_activation"])
+            raw_rows.append({
+                "text": LoupeBackendService._clean_token_text(tokens[position]) or tokens[position],
+                "position": int(position),
+                "feature_id": primary["feature_id"],
+                "raw_activation": primary["raw_activation"],
+                "concept_id": primary["concept_id"],
+                "concept_label": primary["concept_label"],
+                "top_features": top_features,
+            })
+
+        normalized_primary = LoupeBackendService._normalize_activation_values(primary_raw_activations)
+        output: list[TokenAttribution] = []
+        for row, normalized_activation in zip(raw_rows, normalized_primary):
+            primary_raw = row["raw_activation"]
+            scale = normalized_activation / primary_raw if primary_raw > 0 else 0.0
+            top_features = [
+                TokenFeatureScore(
+                    feature_id=feature["feature_id"],
+                    activation=max(0.0, min(feature["raw_activation"] * scale, 1.0)),
+                    raw_activation=feature["raw_activation"],
+                    concept_id=feature["concept_id"],
+                    concept_label=feature["concept_label"],
+                )
+                for feature in row["top_features"]
+            ]
             output.append(
                 TokenAttribution(
-                    text=LoupeBackendService._clean_token_text(tokens[position]) or tokens[position],
-                    position=int(position),
-                    activation=primary.activation,
-                    feature_id=primary.feature_id,
-                    concept_id=primary.concept_id,
-                    concept_label=primary.concept_label,
+                    text=row["text"],
+                    position=row["position"],
+                    activation=normalized_activation,
+                    raw_activation=primary_raw,
+                    feature_id=row["feature_id"],
+                    concept_id=row["concept_id"],
+                    concept_label=row["concept_label"],
                     top_features=top_features,
                 )
             )
         return output
+
+    @staticmethod
+    def _normalize_activation_values(values: list[float]) -> list[float]:
+        """Normalize token activations to [0, 1] for color visualization."""
+        if not values:
+            return []
+
+        tensor = torch.tensor(values, dtype=torch.float32)
+        lower = torch.quantile(tensor, 0.05).item()
+        upper = torch.quantile(tensor, 0.95).item()
+        if upper <= lower:
+            upper = float(tensor.max().item())
+            lower = float(tensor.min().item())
+        if upper <= lower:
+            return [0.5 if value > 0 else 0.0 for value in values]
+
+        normalized = ((tensor - lower) / (upper - lower)).clamp(0.0, 1.0)
+        return [float(value.item()) for value in normalized]
 
     @staticmethod
     def _feature_summary(
@@ -481,14 +521,8 @@ class LoupeBackendService:
         return sorted(set(feature_ids))
 
     @staticmethod
-    def _resolve_intervention_mode(mode: str, strength: float) -> tuple[str, float]:
-        if mode == "boost":
-            return "add", min(abs(strength), 0.05)
-        if mode == "suppress":
-            return "multiply", 0.0
-        if mode == "add":
-            return "add", max(min(strength, 0.05), -0.05)
-        return mode, strength
+    def _resolve_intervention_strength(strength: float) -> float:
+        return max(0.0, min(float(strength), 2.0))
 
     @staticmethod
     def _validate_dashboard_limits(
