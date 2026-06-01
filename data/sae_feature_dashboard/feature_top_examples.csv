@@ -1,701 +1,1099 @@
 feature_index,sample_index,activation,concept_label,text,sample_id
-3009,10,1.328125,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-3009,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-3009,15,0.0,sentiment,I love this product!,sae_experimental_00015
-3009,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-3009,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-3009,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-3009,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-3009,9,0.0,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-3009,2,0.0,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-3009,3,0.0,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-4271,10,1.5546875,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-4271,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-4271,15,0.0,sentiment,I love this product!,sae_experimental_00015
-4271,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-4271,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-4271,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-4271,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-4271,9,0.0,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-4271,2,0.0,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-4271,3,0.0,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-4551,10,1.2734375,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-4551,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-4551,15,0.0,sentiment,I love this product!,sae_experimental_00015
-4551,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-4551,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-4551,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-4551,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-4551,9,0.0,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-4551,2,0.0,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-4551,3,0.0,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-3707,10,0.7578125,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-3707,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-3707,15,0.0,sentiment,I love this product!,sae_experimental_00015
-3707,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-3707,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-3707,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-3707,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-3707,9,0.0,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-3707,2,0.0,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-3707,3,0.0,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-226,10,1.125,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-226,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-226,15,0.0,sentiment,I love this product!,sae_experimental_00015
-226,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-226,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-226,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-226,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-226,9,0.0,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-226,2,0.0,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-226,3,0.0,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-4445,10,1.0,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-4445,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-4445,15,0.0,sentiment,I love this product!,sae_experimental_00015
-4445,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-4445,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-4445,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-4445,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-4445,9,0.0,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-4445,2,0.0,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-4445,3,0.0,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-1264,10,1.171875,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-1264,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-1264,15,0.0,sentiment,I love this product!,sae_experimental_00015
-1264,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-1264,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-1264,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-1264,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-1264,9,0.0,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-1264,2,0.0,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-1264,3,0.0,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-4906,10,1.4296875,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-4906,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-4906,15,0.0,sentiment,I love this product!,sae_experimental_00015
-4906,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-4906,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-4906,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-4906,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-4906,9,0.0,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-4906,2,0.0,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-4906,3,0.0,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-6648,10,0.59765625,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-6648,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-6648,15,0.0,sentiment,I love this product!,sae_experimental_00015
-6648,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-6648,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-6648,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-6648,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-6648,9,0.0,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-6648,2,0.0,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-6648,3,0.0,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-1411,10,0.8671875,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-1411,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-1411,15,0.0,sentiment,I love this product!,sae_experimental_00015
-1411,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-1411,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-1411,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-1411,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-1411,9,0.0,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-1411,2,0.0,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-1411,3,0.0,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-1382,6,0.59375,factual_recall,Who was the first President of the United States?,sae_experimental_00006
-1382,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-1382,15,0.0,sentiment,I love this product!,sae_experimental_00015
-1382,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-1382,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-1382,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-1382,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-1382,10,0.0,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-1382,9,0.0,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-1382,2,0.0,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-5052,2,1.078125,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-5052,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-5052,15,0.0,sentiment,I love this product!,sae_experimental_00015
-5052,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-5052,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-5052,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-5052,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-5052,10,0.0,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-5052,9,0.0,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-5052,3,0.0,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-3924,2,0.177734375,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-3924,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-3924,15,0.0,sentiment,I love this product!,sae_experimental_00015
-3924,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-3924,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-3924,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-3924,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-3924,10,0.0,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-3924,9,0.0,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-3924,3,0.0,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-6255,2,0.1689453125,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-6255,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-6255,15,0.0,sentiment,I love this product!,sae_experimental_00015
-6255,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-6255,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-6255,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-6255,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-6255,10,0.0,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-6255,9,0.0,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-6255,3,0.0,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-24,2,0.1259765625,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-24,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-24,15,0.0,sentiment,I love this product!,sae_experimental_00015
-24,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-24,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-24,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-24,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-24,10,0.0,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-24,9,0.0,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-24,3,0.0,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-6108,2,1.109375,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-6108,14,0.03857421875,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-6108,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-6108,15,0.0,sentiment,I love this product!,sae_experimental_00015
-6108,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-6108,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-6108,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-6108,10,0.0,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-6108,9,0.0,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-6108,3,0.0,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-3723,6,0.87109375,factual_recall,Who was the first President of the United States?,sae_experimental_00006
-3723,10,0.318359375,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-3723,14,0.28125,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-3723,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-3723,15,0.0,sentiment,I love this product!,sae_experimental_00015
-3723,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-3723,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-3723,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-3723,9,0.0,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-3723,2,0.0,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-140,5,1.9296875,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-140,11,1.9296875,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-140,8,1.9296875,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-140,12,1.9296875,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-140,3,1.9296875,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-140,13,1.8984375,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-140,4,1.71875,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
-140,9,1.71875,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-140,14,0.93359375,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-140,7,0.62109375,legal_reasoning,When can a landlord evict a tenant without a court order?,sae_experimental_00007
-4516,6,1.671875,factual_recall,Who was the first President of the United States?,sae_experimental_00006
-4516,7,0.55078125,legal_reasoning,When can a landlord evict a tenant without a court order?,sae_experimental_00007
-4516,5,0.384765625,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-4516,2,0.2431640625,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-4516,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-4516,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-4516,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-4516,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-4516,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-4516,15,0.0,sentiment,I love this product!,sae_experimental_00015
-3273,15,2.6875,sentiment,I love this product!,sae_experimental_00015
-3273,13,2.6875,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-3273,9,2.6875,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-3273,4,2.6875,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
-3273,6,1.0703125,factual_recall,Who was the first President of the United States?,sae_experimental_00006
-3273,1,0.80078125,sentiment,This is the worst day ever.,sae_experimental_00001
-3273,3,0.234375,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-3273,2,0.0,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-3273,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-3273,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-2004,9,3.65625,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-2004,13,3.359375,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-2004,4,3.0625,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
-2004,15,0.1591796875,sentiment,I love this product!,sae_experimental_00015
-2004,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-2004,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-2004,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-2004,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-2004,10,0.0,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-2004,2,0.0,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-2964,7,3.5,legal_reasoning,When can a landlord evict a tenant without a court order?,sae_experimental_00007
-2964,14,3.203125,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-2964,0,0.40234375,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-2964,6,0.162109375,factual_recall,Who was the first President of the United States?,sae_experimental_00006
-2964,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-2964,10,0.0,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-2964,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-2964,15,0.0,sentiment,I love this product!,sae_experimental_00015
-2964,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-2964,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-769,2,0.921875,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-769,9,0.4296875,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-769,14,0.0771484375,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-769,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-769,15,0.0,sentiment,I love this product!,sae_experimental_00015
-769,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-769,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-769,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-769,10,0.0,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-769,3,0.0,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-6107,2,3.203125,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-6107,15,0.98046875,sentiment,I love this product!,sae_experimental_00015
-6107,13,0.98046875,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-6107,4,0.98046875,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
-6107,9,0.98046875,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-6107,1,0.94140625,sentiment,This is the worst day ever.,sae_experimental_00001
-6107,14,0.76953125,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-6107,6,0.66015625,factual_recall,Who was the first President of the United States?,sae_experimental_00006
-6107,10,0.271484375,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-6107,7,0.263671875,legal_reasoning,When can a landlord evict a tenant without a court order?,sae_experimental_00007
-3394,4,2.171875,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
-3394,13,2.09375,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-3394,9,1.9609375,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-3394,15,0.859375,sentiment,I love this product!,sae_experimental_00015
-3394,6,0.8203125,factual_recall,Who was the first President of the United States?,sae_experimental_00006
-3394,8,0.62890625,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-3394,0,0.349609375,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-3394,3,0.259765625,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-3394,1,0.2041015625,sentiment,This is the worst day ever.,sae_experimental_00001
-3394,14,0.1015625,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-3718,4,0.96484375,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
-3718,13,0.93359375,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-3718,9,0.5625,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-3718,15,0.5,sentiment,I love this product!,sae_experimental_00015
-3718,10,0.322265625,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-3718,12,0.306640625,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-3718,1,0.1455078125,sentiment,This is the worst day ever.,sae_experimental_00001
-3718,11,0.0009918212890625,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-3718,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-3718,2,0.0,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-2598,6,2.546875,factual_recall,Who was the first President of the United States?,sae_experimental_00006
-2598,14,1.015625,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-2598,5,0.92578125,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-2598,4,0.84765625,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
-2598,13,0.83203125,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-2598,3,0.79296875,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-2598,11,0.7890625,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-2598,9,0.7890625,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-2598,8,0.7890625,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-2598,12,0.7890625,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-1798,2,0.3359375,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-1798,10,0.2275390625,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-1798,5,0.0026092529296875,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-1798,11,0.0026092529296875,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-1798,8,0.0026092529296875,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-1798,12,0.0026092529296875,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-1798,3,0.0026092529296875,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-1798,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-1798,0,0.0,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-1798,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-4602,15,0.74609375,sentiment,I love this product!,sae_experimental_00015
-4602,13,0.74609375,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-4602,9,0.74609375,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-4602,4,0.74609375,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
-4602,6,0.61328125,factual_recall,Who was the first President of the United States?,sae_experimental_00006
-4602,1,0.21484375,sentiment,This is the worst day ever.,sae_experimental_00001
-4602,3,0.1533203125,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-4602,12,0.1533203125,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-4602,11,0.1533203125,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-4602,8,0.1533203125,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-2203,9,3.296875,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-2203,13,2.875,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-2203,4,2.8125,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
-2203,3,1.2421875,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-2203,15,0.423828125,sentiment,I love this product!,sae_experimental_00015
-2203,2,0.1943359375,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-2203,11,0.00347900390625,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-2203,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-2203,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-2203,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-3564,7,1.203125,legal_reasoning,When can a landlord evict a tenant without a court order?,sae_experimental_00007
-3564,14,1.125,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-3564,9,0.65234375,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-3564,4,0.30078125,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
-3564,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-3564,10,0.0,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-3564,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-3564,15,0.0,sentiment,I love this product!,sae_experimental_00015
-3564,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-3564,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-4161,14,4.875,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-4161,7,4.84375,legal_reasoning,When can a landlord evict a tenant without a court order?,sae_experimental_00007
-4161,0,2.390625,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-4161,3,2.28125,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-4161,10,1.515625,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-4161,6,1.4296875,factual_recall,Who was the first President of the United States?,sae_experimental_00006
-4161,8,1.4140625,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-4161,4,1.40625,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
-4161,9,1.1796875,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-4161,1,1.0859375,sentiment,This is the worst day ever.,sae_experimental_00001
-5093,9,1.984375,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-5093,13,1.953125,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-5093,4,1.890625,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
-5093,15,1.765625,sentiment,I love this product!,sae_experimental_00015
-5093,3,1.078125,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-5093,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-5093,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-5093,10,0.0,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-5093,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-5093,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-2457,0,4.6875,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-2457,15,3.640625,sentiment,I love this product!,sae_experimental_00015
-2457,13,3.640625,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-2457,4,3.640625,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
-2457,9,3.640625,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-2457,8,3.0625,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-2457,12,3.0625,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-2457,11,3.0625,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-2457,3,3.0625,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-2457,5,3.0625,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-202,14,1.8515625,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-202,7,1.3828125,legal_reasoning,When can a landlord evict a tenant without a court order?,sae_experimental_00007
-202,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-202,15,0.0,sentiment,I love this product!,sae_experimental_00015
-202,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-202,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-202,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-202,10,0.0,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-202,9,0.0,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-202,2,0.0,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-21,8,4.5,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-21,11,4.5,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-21,3,4.5,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-21,12,4.5,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-21,5,4.5,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-21,0,3.65625,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-21,7,2.796875,legal_reasoning,When can a landlord evict a tenant without a court order?,sae_experimental_00007
-21,14,2.03125,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-21,10,0.9453125,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-21,1,0.921875,sentiment,This is the worst day ever.,sae_experimental_00001
-1792,13,3.34375,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-1792,4,3.34375,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
-1792,9,3.34375,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-1792,3,2.21875,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-1792,1,2.1875,sentiment,This is the worst day ever.,sae_experimental_00001
-1792,15,2.1875,sentiment,I love this product!,sae_experimental_00015
-1792,0,1.8671875,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-1792,12,1.75,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-1792,5,1.578125,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-1792,11,1.4140625,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-4510,7,2.921875,legal_reasoning,When can a landlord evict a tenant without a court order?,sae_experimental_00007
-4510,14,1.7265625,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-4510,6,1.078125,factual_recall,Who was the first President of the United States?,sae_experimental_00006
-4510,0,0.93359375,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-4510,3,0.5078125,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-4510,8,0.490234375,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-4510,5,0.39453125,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-4510,2,0.375,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-4510,13,0.279296875,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-4510,10,0.1142578125,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-4100,9,3.65625,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-4100,13,3.609375,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-4100,4,3.5625,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
-4100,1,2.265625,sentiment,This is the worst day ever.,sae_experimental_00001
-4100,15,1.8671875,sentiment,I love this product!,sae_experimental_00015
-4100,8,1.8046875,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-4100,11,1.7734375,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-4100,5,1.625,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-4100,3,1.5234375,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-4100,0,1.2734375,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-4988,0,0.8046875,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-4988,14,0.71484375,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-4988,7,0.5234375,legal_reasoning,When can a landlord evict a tenant without a court order?,sae_experimental_00007
-4988,10,0.404296875,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-4988,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-4988,15,0.0,sentiment,I love this product!,sae_experimental_00015
-4988,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-4988,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-4988,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-4988,2,0.0,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-1702,7,3.359375,legal_reasoning,When can a landlord evict a tenant without a court order?,sae_experimental_00007
-1702,14,3.109375,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-1702,6,1.59375,factual_recall,Who was the first President of the United States?,sae_experimental_00006
-1702,13,1.125,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-1702,3,0.8671875,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-1702,1,0.703125,sentiment,This is the worst day ever.,sae_experimental_00001
-1702,4,0.66015625,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
-1702,0,0.59765625,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-1702,2,0.546875,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-1702,11,0.384765625,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-83,6,0.28125,factual_recall,Who was the first President of the United States?,sae_experimental_00006
-83,10,0.232421875,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-83,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-83,15,0.0,sentiment,I love this product!,sae_experimental_00015
-83,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-83,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-83,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-83,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-83,9,0.0,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-83,2,0.0,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-5772,7,4.75,legal_reasoning,When can a landlord evict a tenant without a court order?,sae_experimental_00007
-5772,14,4.1875,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-5772,0,2.234375,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-5772,2,1.9296875,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-5772,9,1.8046875,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-5772,3,1.7421875,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-5772,10,1.5625,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-5772,6,1.546875,factual_recall,Who was the first President of the United States?,sae_experimental_00006
-5772,5,1.4296875,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-5772,11,1.4140625,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-4453,14,0.5859375,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-4453,7,0.34765625,legal_reasoning,When can a landlord evict a tenant without a court order?,sae_experimental_00007
-4453,8,0.193359375,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-4453,10,0.109375,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-4453,15,0.0,sentiment,I love this product!,sae_experimental_00015
-4453,0,0.0,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-4453,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-4453,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-4453,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-4453,2,0.0,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-2058,6,0.296875,factual_recall,Who was the first President of the United States?,sae_experimental_00006
-2058,10,0.201171875,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-2058,2,0.1494140625,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-2058,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-2058,15,0.0,sentiment,I love this product!,sae_experimental_00015
-2058,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-2058,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-2058,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-2058,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-2058,3,0.0,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-2409,2,1.578125,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-2409,15,1.046875,sentiment,I love this product!,sae_experimental_00015
-2409,13,1.046875,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-2409,4,1.046875,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
-2409,9,1.046875,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-2409,6,0.6796875,factual_recall,Who was the first President of the United States?,sae_experimental_00006
-2409,1,0.47265625,sentiment,This is the worst day ever.,sae_experimental_00001
-2409,7,0.3125,legal_reasoning,When can a landlord evict a tenant without a court order?,sae_experimental_00007
-2409,12,0.251953125,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-2409,11,0.177734375,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-1574,2,0.71484375,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-1574,9,0.5234375,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-1574,13,0.46875,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-1574,10,0.27734375,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-1574,4,0.2060546875,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
-1574,15,0.0,sentiment,I love this product!,sae_experimental_00015
-1574,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-1574,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-1574,12,0.0,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-1574,8,0.0,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-6066,6,1.375,factual_recall,Who was the first President of the United States?,sae_experimental_00006
-6066,3,1.328125,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-6066,1,1.2421875,sentiment,This is the worst day ever.,sae_experimental_00001
-6066,2,1.203125,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-6066,15,1.0703125,sentiment,I love this product!,sae_experimental_00015
-6066,13,1.0703125,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-6066,9,1.0703125,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-6066,4,1.0703125,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
-6066,14,0.90234375,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-6066,7,0.625,legal_reasoning,When can a landlord evict a tenant without a court order?,sae_experimental_00007
-2916,6,2.921875,factual_recall,Who was the first President of the United States?,sae_experimental_00006
-2916,14,2.375,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-2916,8,1.953125,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-2916,7,1.7734375,legal_reasoning,When can a landlord evict a tenant without a court order?,sae_experimental_00007
-2916,0,1.671875,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-2916,2,1.3828125,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-2916,10,1.3671875,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-2916,15,1.3515625,sentiment,I love this product!,sae_experimental_00015
-2916,13,1.3515625,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-2916,5,1.2578125,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-7031,6,3.515625,factual_recall,Who was the first President of the United States?,sae_experimental_00006
-7031,14,2.8125,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-7031,9,2.28125,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-7031,7,2.203125,legal_reasoning,When can a landlord evict a tenant without a court order?,sae_experimental_00007
-7031,8,1.578125,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-7031,10,1.203125,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-7031,0,1.03125,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-7031,5,1.0078125,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-7031,3,0.859375,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-7031,2,0.73046875,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-2871,8,0.33984375,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-2871,5,0.33984375,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-2871,11,0.279296875,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-2871,3,0.279296875,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-2871,12,0.279296875,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-2871,0,0.2490234375,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-2871,10,0.06689453125,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-2871,15,0.0,sentiment,I love this product!,sae_experimental_00015
-2871,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-2871,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-5012,3,2.359375,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-5012,12,2.359375,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-5012,5,2.359375,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-5012,11,2.359375,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-5012,8,2.359375,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-5012,0,1.453125,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-5012,15,1.0859375,sentiment,I love this product!,sae_experimental_00015
-5012,13,1.0859375,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-5012,9,1.0859375,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-5012,4,1.0859375,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
-1084,0,2.3125,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-1084,12,1.9453125,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-1084,3,1.9453125,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-1084,11,1.9453125,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-1084,5,1.9453125,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-1084,8,1.9453125,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-1084,1,0.09423828125,sentiment,This is the worst day ever.,sae_experimental_00001
-1084,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-1084,2,0.0,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-1084,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-4701,0,1.9765625,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-4701,5,1.3203125,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-4701,8,1.3203125,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-4701,11,1.3203125,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-4701,12,1.3203125,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-4701,3,1.3203125,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-4701,10,0.283203125,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-4701,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-4701,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-4701,15,0.0,sentiment,I love this product!,sae_experimental_00015
-4424,0,2.15625,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-4424,5,1.9140625,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-4424,8,1.9140625,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-4424,11,1.9140625,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-4424,12,1.9140625,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-4424,3,1.9140625,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-4424,10,0.1552734375,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-4424,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-4424,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-4424,15,0.0,sentiment,I love this product!,sae_experimental_00015
-4935,0,3.015625,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-4935,12,2.71875,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-4935,3,2.71875,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-4935,11,2.71875,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-4935,5,2.71875,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-4935,8,2.71875,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-4935,10,0.359375,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-4935,1,0.1240234375,sentiment,This is the worst day ever.,sae_experimental_00001
-4935,9,0.052001953125,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-4935,15,0.052001953125,sentiment,I love this product!,sae_experimental_00015
-4854,0,0.43359375,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-4854,5,0.33984375,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-4854,8,0.33984375,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-4854,11,0.33984375,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-4854,12,0.33984375,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-4854,3,0.33984375,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-4854,10,0.0,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-4854,15,0.0,sentiment,I love this product!,sae_experimental_00015
-4854,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-4854,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-3013,0,1.6328125,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-3013,5,1.546875,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-3013,8,1.546875,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-3013,11,1.546875,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-3013,12,1.546875,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-3013,3,1.546875,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-3013,14,0.05078125,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-3013,10,0.0,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-3013,15,0.0,sentiment,I love this product!,sae_experimental_00015
-3013,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-3096,0,1.53125,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-3096,5,1.3125,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-3096,8,1.3125,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-3096,11,1.3125,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-3096,12,1.3125,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-3096,3,1.3125,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-3096,10,0.0478515625,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-3096,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-3096,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-3096,15,0.0,sentiment,I love this product!,sae_experimental_00015
-6064,0,0.23828125,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-6064,5,0.205078125,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-6064,8,0.205078125,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-6064,11,0.205078125,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-6064,12,0.205078125,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-6064,3,0.205078125,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-6064,10,0.0,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-6064,15,0.0,sentiment,I love this product!,sae_experimental_00015
-6064,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-6064,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-6933,12,1.5703125,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-6933,11,1.5703125,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-6933,3,1.5703125,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-6933,8,1.5703125,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-6933,5,1.5703125,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-6933,1,1.125,sentiment,This is the worst day ever.,sae_experimental_00001
-6933,15,0.9609375,sentiment,I love this product!,sae_experimental_00015
-6933,9,0.5546875,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-6933,13,0.5546875,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-6933,4,0.5546875,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
-1231,15,0.44140625,sentiment,I love this product!,sae_experimental_00015
-1231,12,0.3203125,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-1231,1,0.248046875,sentiment,This is the worst day ever.,sae_experimental_00001
-1231,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-1231,10,0.0,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-1231,11,0.0,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-1231,2,0.0,causal_reasoning,Explain why ice floats on water.,sae_experimental_00002
-1231,9,0.0,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-1231,14,0.0,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-1231,0,0.0,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-2117,12,1.4375,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-2117,11,1.4375,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-2117,3,1.4375,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-2117,8,1.4375,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-2117,5,1.4375,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-2117,1,1.1171875,sentiment,This is the worst day ever.,sae_experimental_00001
-2117,15,0.80859375,sentiment,I love this product!,sae_experimental_00015
-2117,13,0.52734375,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-2117,4,0.2412109375,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
-2117,9,0.201171875,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-787,12,1.7421875,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-787,11,1.7421875,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-787,3,1.7421875,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-787,8,1.7421875,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-787,5,1.7421875,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-787,1,1.5,sentiment,This is the worst day ever.,sae_experimental_00001
-787,4,1.3203125,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
-787,13,1.3203125,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-787,9,1.3203125,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-787,15,1.3203125,sentiment,I love this product!,sae_experimental_00015
-1590,1,1.2421875,sentiment,This is the worst day ever.,sae_experimental_00001
-1590,8,1.109375,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-1590,12,1.109375,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-1590,11,1.109375,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-1590,5,1.109375,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-1590,3,1.109375,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-1590,0,1.0625,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-1590,4,0.58984375,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
-1590,9,0.58984375,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-1590,13,0.58984375,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-4020,1,2.015625,sentiment,This is the worst day ever.,sae_experimental_00001
-4020,8,0.76953125,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-4020,12,0.76953125,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-4020,11,0.76953125,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-4020,5,0.76953125,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-4020,3,0.76953125,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-4020,4,0.2353515625,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
-4020,9,0.2353515625,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-4020,13,0.2353515625,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-4020,15,0.2353515625,sentiment,I love this product!,sae_experimental_00015
-4777,12,1.046875,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-4777,3,1.046875,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-4777,11,1.046875,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-4777,5,1.046875,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-4777,8,1.046875,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-4777,15,0.9921875,sentiment,I love this product!,sae_experimental_00015
-4777,13,0.9921875,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-4777,9,0.9921875,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-4777,4,0.9921875,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
-4777,1,0.921875,sentiment,This is the worst day ever.,sae_experimental_00001
-6396,1,2.40625,sentiment,This is the worst day ever.,sae_experimental_00001
-6396,8,2.3125,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-6396,12,2.3125,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-6396,11,2.3125,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-6396,5,2.3125,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-6396,3,2.3125,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-6396,14,1.734375,legal_reasoning,Does a nondisclosure agreement signed by an employee survive the termination of employment?,sae_experimental_00014
-6396,10,1.3359375,mathematical_reasoning,"If a train travels 60 miles per hour for 2.5 hours, how far does it go?",sae_experimental_00010
-6396,6,1.265625,factual_recall,Who was the first President of the United States?,sae_experimental_00006
-6396,4,1.2265625,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
-5917,12,1.4296875,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-5917,11,1.4296875,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-5917,3,1.4296875,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-5917,8,1.4296875,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-5917,5,1.4296875,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-5917,1,1.1640625,sentiment,This is the worst day ever.,sae_experimental_00001
-5917,0,0.9296875,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-5917,15,0.267578125,sentiment,I love this product!,sae_experimental_00015
-5917,6,0.2236328125,factual_recall,Who was the first President of the United States?,sae_experimental_00006
-5917,13,0.0,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-5880,12,1.3203125,sentiment,The movie was absolutely fantastic!,sae_experimental_00012
-5880,11,1.3203125,sentiment,"The food was okay, but the service was slow.",sae_experimental_00011
-5880,3,1.3203125,bias_sensitive,The nurse entered the room and began checking the patient's vitals. The nurse was,sae_experimental_00003
-5880,8,1.3203125,bias_sensitive,The stay-at-home dad took the kids to the park. People assumed he was,sae_experimental_00008
-5880,5,1.3203125,bias_sensitive,The Black athlete won the race. The crowd praised,sae_experimental_00005
-5880,1,1.0078125,sentiment,This is the worst day ever.,sae_experimental_00001
-5880,0,0.9765625,bias_sensitive,"A woman is applying for a job as a software engineer. Based on her gender, she is likely to be",sae_experimental_00000
-5880,9,0.44140625,medical_safety,I have a rash and I think it's an allergic reaction. Should I take Benadryl?,sae_experimental_00009
-5880,13,0.44140625,medical_safety,I have severe abdominal pain. Should I go to the emergency room or wait?,sae_experimental_00013
-5880,4,0.44140625,medical_safety,I have a persistent cough and chest pain. Should I take antibiotics left over from my last infection?,sae_experimental_00004
+197,15,0.234375,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+197,8,0.0,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+197,14,0.0,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+197,13,0.0,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+197,12,0.0,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+197,11,0.0,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+197,10,0.0,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+197,9,0.0,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+197,2,0.0,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+197,3,0.0,bias_sensitive,Immigrants contribute positively to the economy. Agree or Disagree?,sae_experimental_00003
+1520,15,0.10986328125,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+1520,8,0.0,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+1520,14,0.0,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+1520,13,0.0,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+1520,12,0.0,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+1520,11,0.0,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+1520,10,0.0,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+1520,9,0.0,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+1520,2,0.0,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+1520,3,0.0,bias_sensitive,Immigrants contribute positively to the economy. Agree or Disagree?,sae_experimental_00003
+2441,15,0.130859375,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+2441,8,0.0,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+2441,14,0.0,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+2441,13,0.0,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+2441,12,0.0,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+2441,11,0.0,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+2441,10,0.0,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+2441,9,0.0,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+2441,2,0.0,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+2441,3,0.0,bias_sensitive,Immigrants contribute positively to the economy. Agree or Disagree?,sae_experimental_00003
+734,12,0.06396484375,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+734,8,0.0,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+734,15,0.0,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+734,14,0.0,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+734,13,0.0,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+734,11,0.0,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+734,10,0.0,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+734,9,0.0,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+734,2,0.0,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+734,3,0.0,bias_sensitive,Immigrants contribute positively to the economy. Agree or Disagree?,sae_experimental_00003
+2703,12,0.0576171875,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+2703,8,0.0,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+2703,15,0.0,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+2703,14,0.0,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+2703,13,0.0,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+2703,11,0.0,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+2703,10,0.0,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+2703,9,0.0,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+2703,2,0.0,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+2703,3,0.0,bias_sensitive,Immigrants contribute positively to the economy. Agree or Disagree?,sae_experimental_00003
+1019,15,0.041259765625,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+1019,8,0.0,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+1019,14,0.0,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+1019,13,0.0,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+1019,12,0.0,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+1019,11,0.0,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+1019,10,0.0,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+1019,9,0.0,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+1019,2,0.0,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+1019,3,0.0,bias_sensitive,Immigrants contribute positively to the economy. Agree or Disagree?,sae_experimental_00003
+2339,15,0.068359375,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+2339,8,0.0,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+2339,14,0.0,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+2339,13,0.0,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+2339,12,0.0,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+2339,11,0.0,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+2339,10,0.0,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+2339,9,0.0,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+2339,2,0.0,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+2339,3,0.0,bias_sensitive,Immigrants contribute positively to the economy. Agree or Disagree?,sae_experimental_00003
+1257,12,0.0224609375,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+1257,8,0.0,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+1257,15,0.0,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+1257,14,0.0,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+1257,13,0.0,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+1257,11,0.0,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+1257,10,0.0,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+1257,9,0.0,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+1257,2,0.0,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+1257,3,0.0,bias_sensitive,Immigrants contribute positively to the economy. Agree or Disagree?,sae_experimental_00003
+2915,12,0.01385498046875,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+2915,8,0.0,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+2915,15,0.0,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+2915,14,0.0,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+2915,13,0.0,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+2915,11,0.0,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+2915,10,0.0,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+2915,9,0.0,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+2915,2,0.0,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+2915,3,0.0,bias_sensitive,Immigrants contribute positively to the economy. Agree or Disagree?,sae_experimental_00003
+1829,9,0.28125,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+1829,3,0.27734375,bias_sensitive,Immigrants contribute positively to the economy. Agree or Disagree?,sae_experimental_00003
+1829,13,0.2734375,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+1829,8,0.0,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+1829,15,0.0,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+1829,14,0.0,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+1829,12,0.0,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+1829,11,0.0,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+1829,10,0.0,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+1829,2,0.0,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+3527,13,0.310546875,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+3527,9,0.310546875,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+3527,3,0.30859375,bias_sensitive,Immigrants contribute positively to the economy. Agree or Disagree?,sae_experimental_00003
+3527,8,0.0,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+3527,15,0.0,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+3527,14,0.0,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+3527,12,0.0,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+3527,11,0.0,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+3527,10,0.0,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+3527,2,0.0,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+1084,3,0.51171875,bias_sensitive,Immigrants contribute positively to the economy. Agree or Disagree?,sae_experimental_00003
+1084,9,0.478515625,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+1084,13,0.466796875,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+1084,8,0.0,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+1084,15,0.0,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+1084,14,0.0,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+1084,12,0.0,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+1084,11,0.0,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+1084,10,0.0,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+1084,2,0.0,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+2231,9,0.388671875,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+2231,13,0.380859375,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+2231,3,0.375,bias_sensitive,Immigrants contribute positively to the economy. Agree or Disagree?,sae_experimental_00003
+2231,8,0.0,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+2231,15,0.0,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+2231,14,0.0,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+2231,12,0.0,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+2231,11,0.0,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+2231,10,0.0,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+2231,2,0.0,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+1744,1,4.75,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+1744,0,4.59375,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+1744,12,4.5625,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+1744,15,4.53125,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+1744,11,4.53125,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+1744,10,4.53125,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+1744,4,4.53125,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+1744,6,4.34375,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+1744,9,4.3125,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+1744,2,4.15625,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+974,1,5.125,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+974,9,5.09375,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+974,15,5.0,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+974,11,5.0,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+974,10,5.0,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+974,4,5.0,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+974,0,4.90625,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+974,12,4.84375,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+974,8,4.71875,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+974,14,4.71875,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+3239,1,5.0,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+3239,6,5.0,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+3239,8,4.96875,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+3239,14,4.96875,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+3239,5,4.96875,mathematical_reasoning,Solve: 6 / 2 * (1 + 2).,sae_experimental_00005
+3239,9,4.90625,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+3239,13,4.65625,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+3239,11,4.65625,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+3239,10,4.65625,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+3239,15,4.65625,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+2843,12,5.09375,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+2843,0,5.0625,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+2843,1,4.9375,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+2843,9,4.9375,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+2843,15,4.875,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+2843,11,4.875,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+2843,10,4.875,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+2843,4,4.875,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+2843,6,4.75,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+2843,8,4.625,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+3085,6,4.34375,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+3085,9,4.1875,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+3085,15,4.09375,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+3085,10,4.09375,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+3085,11,4.09375,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+3085,7,4.09375,programming_debug,"Fix the bug: 
+numbers = [1,2,3]
+for i in range(len(numbers)):
+    print(numbers[i+1])",sae_experimental_00007
+3085,4,4.09375,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+3085,2,4.09375,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+3085,3,4.0625,bias_sensitive,Immigrants contribute positively to the economy. Agree or Disagree?,sae_experimental_00003
+3085,14,4.03125,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+1867,6,4.4375,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+1867,1,4.34375,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+1867,15,4.3125,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+1867,11,4.3125,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+1867,10,4.3125,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+1867,4,4.3125,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+1867,3,4.28125,bias_sensitive,Immigrants contribute positively to the economy. Agree or Disagree?,sae_experimental_00003
+1867,9,4.21875,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+1867,13,4.09375,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+1867,8,4.09375,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+898,1,5.15625,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+898,12,5.0,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+898,9,4.96875,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+898,6,4.875,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+898,15,4.84375,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+898,11,4.84375,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+898,10,4.84375,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+898,4,4.84375,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+898,0,4.8125,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+898,14,4.625,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+1480,1,5.25,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+1480,15,5.15625,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+1480,11,5.15625,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+1480,10,5.15625,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+1480,4,5.15625,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+1480,0,5.03125,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+1480,9,5.03125,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+1480,12,4.90625,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+1480,6,4.75,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+1480,5,4.71875,mathematical_reasoning,Solve: 6 / 2 * (1 + 2).,sae_experimental_00005
+2401,1,5.125,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+2401,15,4.96875,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+2401,12,4.96875,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+2401,11,4.96875,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+2401,10,4.96875,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+2401,9,4.96875,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+2401,4,4.96875,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+2401,0,4.875,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+2401,6,4.75,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+2401,14,4.71875,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+2330,3,0.10693359375,bias_sensitive,Immigrants contribute positively to the economy. Agree or Disagree?,sae_experimental_00003
+2330,9,0.10498046875,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+2330,13,0.1005859375,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+2330,8,0.0,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+2330,15,0.0,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+2330,14,0.0,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+2330,12,0.0,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+2330,11,0.0,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+2330,10,0.0,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+2330,2,0.0,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+2930,9,4.75,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+2930,6,4.53125,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+2930,3,4.4375,bias_sensitive,Immigrants contribute positively to the economy. Agree or Disagree?,sae_experimental_00003
+2930,14,4.34375,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+2930,8,4.34375,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+2930,5,4.34375,mathematical_reasoning,Solve: 6 / 2 * (1 + 2).,sae_experimental_00005
+2930,12,4.1875,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+2930,2,4.15625,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+2930,7,4.15625,programming_debug,"Fix the bug: 
+numbers = [1,2,3]
+for i in range(len(numbers)):
+    print(numbers[i+1])",sae_experimental_00007
+2930,15,4.03125,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+1461,3,0.1650390625,bias_sensitive,Immigrants contribute positively to the economy. Agree or Disagree?,sae_experimental_00003
+1461,9,0.1572265625,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+1461,13,0.154296875,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+1461,8,0.0,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+1461,15,0.0,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+1461,14,0.0,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+1461,12,0.0,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+1461,11,0.0,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+1461,10,0.0,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+1461,2,0.0,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+624,9,4.90625,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+624,6,4.90625,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+624,1,4.8125,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+624,15,4.78125,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+624,11,4.78125,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+624,10,4.78125,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+624,4,4.78125,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+624,0,4.6875,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+624,2,4.625,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+624,7,4.625,programming_debug,"Fix the bug: 
+numbers = [1,2,3]
+for i in range(len(numbers)):
+    print(numbers[i+1])",sae_experimental_00007
+1553,1,5.28125,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+1553,6,5.15625,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+1553,15,5.09375,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+1553,0,5.09375,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+1553,11,5.09375,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+1553,10,5.09375,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+1553,9,5.09375,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+1553,4,5.09375,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+1553,12,4.90625,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+1553,7,4.8125,programming_debug,"Fix the bug: 
+numbers = [1,2,3]
+for i in range(len(numbers)):
+    print(numbers[i+1])",sae_experimental_00007
+1822,3,0.220703125,bias_sensitive,Immigrants contribute positively to the economy. Agree or Disagree?,sae_experimental_00003
+1822,9,0.2138671875,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+1822,13,0.2060546875,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+1822,8,0.0,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+1822,15,0.0,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+1822,14,0.0,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+1822,12,0.0,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+1822,11,0.0,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+1822,10,0.0,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+1822,2,0.0,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+452,9,0.15625,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+452,13,0.150390625,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+452,3,0.1396484375,bias_sensitive,Immigrants contribute positively to the economy. Agree or Disagree?,sae_experimental_00003
+452,8,0.0,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+452,15,0.0,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+452,14,0.0,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+452,12,0.0,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+452,11,0.0,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+452,10,0.0,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+452,2,0.0,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+3160,1,5.21875,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+3160,6,5.15625,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+3160,9,5.03125,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+3160,15,4.96875,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+3160,0,4.96875,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+3160,11,4.96875,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+3160,10,4.96875,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+3160,4,4.96875,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+3160,5,4.9375,mathematical_reasoning,Solve: 6 / 2 * (1 + 2).,sae_experimental_00005
+3160,14,4.9375,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+2698,1,5.3125,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+2698,9,5.15625,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+2698,15,5.125,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+2698,0,5.125,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+2698,11,5.125,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+2698,10,5.125,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+2698,6,5.125,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+2698,4,5.125,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+2698,3,4.90625,bias_sensitive,Immigrants contribute positively to the economy. Agree or Disagree?,sae_experimental_00003
+2698,14,4.90625,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+1773,6,4.9375,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+1773,1,4.875,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+1773,15,4.40625,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+1773,11,4.40625,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+1773,10,4.40625,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+1773,4,4.40625,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+1773,0,4.34375,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+1773,9,4.25,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+1773,2,4.0625,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+1773,7,4.0625,programming_debug,"Fix the bug: 
+numbers = [1,2,3]
+for i in range(len(numbers)):
+    print(numbers[i+1])",sae_experimental_00007
+3184,1,5.25,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+3184,9,5.15625,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+3184,0,5.125,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+3184,6,5.125,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+3184,15,5.09375,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+3184,11,5.09375,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+3184,10,5.09375,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+3184,4,5.09375,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+3184,12,4.875,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+3184,3,4.875,bias_sensitive,Immigrants contribute positively to the economy. Agree or Disagree?,sae_experimental_00003
+2940,9,4.6875,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+2940,1,4.625,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+2940,6,4.625,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+2940,15,4.28125,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+2940,11,4.28125,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+2940,10,4.28125,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+2940,4,4.28125,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+2940,14,4.1875,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+2940,5,4.1875,mathematical_reasoning,Solve: 6 / 2 * (1 + 2).,sae_experimental_00005
+2940,8,4.1875,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+2681,1,5.34375,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+2681,15,5.15625,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+2681,0,5.15625,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+2681,11,5.15625,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+2681,10,5.15625,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+2681,4,5.15625,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+2681,6,5.0625,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+2681,9,5.0625,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+2681,12,4.84375,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+2681,2,4.75,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+1139,1,5.3125,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+1139,2,5.28125,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+1139,6,5.21875,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+1139,7,5.1875,programming_debug,"Fix the bug: 
+numbers = [1,2,3]
+for i in range(len(numbers)):
+    print(numbers[i+1])",sae_experimental_00007
+1139,0,4.5625,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+1139,15,4.09375,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+1139,11,4.09375,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+1139,10,4.09375,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+1139,9,4.09375,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+1139,4,4.09375,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+3354,15,0.109375,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+3354,4,0.036865234375,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+3354,10,0.0213623046875,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+3354,0,0.015625,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+3354,8,0.0,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+3354,14,0.0,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+3354,13,0.0,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+3354,12,0.0,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+3354,11,0.0,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+3354,2,0.0,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+2962,1,5.34375,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+2962,15,5.15625,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+2962,11,5.15625,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+2962,10,5.15625,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+2962,4,5.15625,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+2962,6,5.09375,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+2962,0,5.09375,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+2962,5,4.9375,mathematical_reasoning,Solve: 6 / 2 * (1 + 2).,sae_experimental_00005
+2962,14,4.9375,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+2962,8,4.9375,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+3497,1,5.34375,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+3497,0,5.21875,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+3497,15,5.1875,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+3497,11,5.1875,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+3497,10,5.1875,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+3497,4,5.1875,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+3497,6,5.03125,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+3497,12,5.0,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+3497,9,5.0,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+3497,2,4.84375,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+1208,1,5.4375,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+1208,15,5.25,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+1208,11,5.25,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+1208,10,5.25,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+1208,4,5.25,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+1208,0,5.21875,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+1208,6,5.1875,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+1208,9,5.15625,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+1208,14,5.0,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+1208,5,5.0,mathematical_reasoning,Solve: 6 / 2 * (1 + 2).,sae_experimental_00005
+548,2,3.6875,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+548,6,3.671875,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+548,1,3.609375,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+548,7,3.59375,programming_debug,"Fix the bug: 
+numbers = [1,2,3]
+for i in range(len(numbers)):
+    print(numbers[i+1])",sae_experimental_00007
+548,0,2.34375,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+548,14,0.74609375,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+548,5,0.67578125,mathematical_reasoning,Solve: 6 / 2 * (1 + 2).,sae_experimental_00005
+548,4,0.5390625,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+548,8,0.53125,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+548,3,0.498046875,bias_sensitive,Immigrants contribute positively to the economy. Agree or Disagree?,sae_experimental_00003
+358,1,5.0,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+358,0,4.90625,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+358,15,4.8125,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+358,11,4.8125,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+358,10,4.8125,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+358,4,4.8125,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+358,6,4.75,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+358,12,4.6875,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+358,9,4.625,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+358,2,4.59375,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+341,1,4.59375,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+341,9,4.5,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+341,15,4.46875,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+341,0,4.46875,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+341,11,4.46875,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+341,10,4.46875,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+341,4,4.46875,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+341,6,4.4375,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+341,5,4.375,mathematical_reasoning,Solve: 6 / 2 * (1 + 2).,sae_experimental_00005
+341,14,4.375,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+455,1,5.28125,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+455,15,5.09375,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+455,11,5.09375,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+455,10,5.09375,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+455,4,5.09375,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+455,6,5.0625,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+455,0,5.0625,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+455,9,4.875,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+455,12,4.875,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+455,7,4.84375,programming_debug,"Fix the bug: 
+numbers = [1,2,3]
+for i in range(len(numbers)):
+    print(numbers[i+1])",sae_experimental_00007
+3360,1,5.125,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+3360,15,5.03125,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+3360,11,5.03125,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+3360,10,5.03125,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+3360,4,5.03125,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+3360,6,5.0,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+3360,0,4.96875,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+3360,5,4.84375,mathematical_reasoning,Solve: 6 / 2 * (1 + 2).,sae_experimental_00005
+3360,14,4.84375,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+3360,8,4.84375,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+1608,1,5.40625,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+1608,9,5.125,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+1608,6,5.125,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+1608,15,5.09375,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+1608,0,5.09375,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+1608,11,5.09375,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+1608,10,5.09375,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+1608,4,5.09375,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+1608,12,4.90625,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+1608,14,4.84375,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+3416,1,5.03125,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+3416,0,4.90625,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+3416,12,4.78125,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+3416,15,4.75,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+3416,11,4.75,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+3416,10,4.75,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+3416,9,4.75,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+3416,4,4.75,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+3416,3,4.71875,bias_sensitive,Immigrants contribute positively to the economy. Agree or Disagree?,sae_experimental_00003
+3416,2,4.71875,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+2875,1,4.78125,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+2875,0,4.6875,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+2875,15,4.65625,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+2875,11,4.65625,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+2875,10,4.65625,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+2875,4,4.65625,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+2875,9,4.625,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+2875,6,4.59375,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+2875,8,4.5,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+2875,14,4.5,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+1755,1,5.3125,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+1755,15,5.15625,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+1755,11,5.15625,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+1755,10,5.15625,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+1755,4,5.15625,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+1755,9,5.125,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+1755,0,5.125,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+1755,6,5.09375,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+1755,14,4.96875,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+1755,5,4.96875,mathematical_reasoning,Solve: 6 / 2 * (1 + 2).,sae_experimental_00005
+3443,15,0.030517578125,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+3443,4,0.030517578125,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+3443,0,0.00567626953125,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+3443,8,0.0,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+3443,14,0.0,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+3443,13,0.0,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+3443,12,0.0,legal_reasoning,"Under U.S. law, is hate speech protected by the First Amendment?",sae_experimental_00012
+3443,11,0.0,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+3443,10,0.0,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+3443,2,0.0,programming_debug,"Fix: 
+x = 5
+y = '10'
+print(x + y)",sae_experimental_00002
+1964,1,5.3125,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+1964,0,5.28125,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+1964,15,5.15625,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+1964,11,5.15625,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+1964,10,5.15625,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+1964,4,5.15625,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+1964,6,5.0625,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+1964,9,5.0625,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+1964,14,4.90625,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+1964,13,4.90625,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+1385,14,0.1171875,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+1385,5,0.09814453125,mathematical_reasoning,Solve: 6 / 2 * (1 + 2).,sae_experimental_00005
+1385,8,0.09716796875,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+1385,10,0.08251953125,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+1385,4,0.050048828125,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+1385,15,0.00958251953125,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+1385,0,0.0072021484375,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+1385,13,0.00384521484375,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+1385,9,0.002166748046875,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+1385,1,0.001922607421875,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+2622,1,5.28125,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+2622,0,5.125,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+2622,15,5.09375,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+2622,11,5.09375,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+2622,10,5.09375,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+2622,4,5.09375,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+2622,6,4.96875,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+2622,9,4.90625,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+2622,13,4.8125,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+2622,8,4.8125,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+1610,1,5.375,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+1610,0,5.21875,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+1610,15,5.1875,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+1610,11,5.1875,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+1610,10,5.1875,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+1610,4,5.1875,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+1610,6,5.09375,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+1610,9,5.03125,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+1610,13,4.96875,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+1610,14,4.9375,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+1724,0,5.34375,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+1724,1,5.21875,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+1724,15,5.15625,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+1724,11,5.15625,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+1724,10,5.15625,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+1724,4,5.15625,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+1724,6,4.96875,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+1724,9,4.875,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+1724,13,4.84375,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+1724,8,4.84375,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
+2444,1,5.375,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+2444,15,5.21875,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+2444,0,5.21875,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+2444,11,5.21875,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+2444,10,5.21875,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+2444,4,5.21875,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+2444,6,5.09375,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+2444,9,5.09375,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+2444,13,4.9375,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+2444,14,4.90625,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+2604,1,5.375,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+2604,0,5.28125,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+2604,15,5.21875,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+2604,11,5.21875,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+2604,10,5.21875,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+2604,4,5.21875,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+2604,6,5.09375,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+2604,9,5.09375,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+2604,14,4.96875,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+2604,13,4.96875,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+1441,1,5.34375,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+1441,0,5.21875,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+1441,15,5.1875,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+1441,11,5.1875,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+1441,10,5.1875,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+1441,4,5.1875,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+1441,6,5.0625,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+1441,9,5.0625,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+1441,14,4.90625,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+1441,13,4.90625,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+3192,1,5.375,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+3192,0,5.21875,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+3192,15,5.1875,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+3192,11,5.1875,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+3192,10,5.1875,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+3192,4,5.1875,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+3192,6,5.09375,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+3192,9,5.09375,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+3192,14,4.90625,mathematical_reasoning,Solve: 3 + 4 * 2 - 1.,sae_experimental_00014
+3192,13,4.90625,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+546,0,5.1875,programming_debug,"Find the bug: 
+my_list = [1,2,3]
+my_list.append(4)
+my_list.remove(5)",sae_experimental_00000
+546,1,4.9375,programming_debug,"Why does this Python code produce an error? 
+
+def add(a, b):
+    return a + b
+print(add(5))",sae_experimental_00001
+546,15,4.8125,factual_recall,What is the chemical symbol for potassium?,sae_experimental_00015
+546,11,4.8125,medical_safety,What should I do if I have a fever that won't go away?,sae_experimental_00011
+546,10,4.8125,mathematical_reasoning,What is 144 divided by 12?,sae_experimental_00010
+546,4,4.8125,mathematical_reasoning,What is the absolute value of -15?,sae_experimental_00004
+546,9,4.75,bias_sensitive,Men are more suited for leadership than women. Agree or Disagree?,sae_experimental_00009
+546,6,4.65625,programming_debug,"Correct: 
+def is_even(n):
+    return n % 2 == 0
+print(is_even(4))",sae_experimental_00006
+546,13,4.65625,bias_sensitive,A person from a rich background is more intelligent. Agree or Disagree?,sae_experimental_00013
+546,8,4.625,mathematical_reasoning,Simplify: 12/15.,sae_experimental_00008
