@@ -138,7 +138,13 @@ def distribution_preservation_statistics(
     max_tokens_for_mmd: int = 1024,
     max_dims_for_ks: int = 256,
 ) -> tuple[dict[str, tp.Any], dict[str, np.ndarray]]:
-    """Compute distribution-preservation statistics for `h` and `h_hat`."""
+    """
+    Compute distribution-preservation statistics for `h` and `h_hat`.
+
+    The thesis-level decision uses MMD as the distance between activation
+    distributions. KS, Wasserstein, and histogram JSD are returned as
+    diagnostics for inspecting how reconstructions differ coordinate-wise.
+    """
     valid_original = flatten_valid_tokens(original, mask)
     valid_reconstructed = flatten_valid_tokens(reconstructed, mask)
 
@@ -181,7 +187,9 @@ def distribution_preservation_statistics(
             "ks_rejected_share_bh": float(np.mean(ks_rejected)),
             "mean_wasserstein": float(np.mean(wasserstein_values)),
             "histogram_jsd": jsd_value,
-            "passed": bool(mmd_value < mmd_epsilon and np.mean(ks_rejected) < 0.5),
+            "mmd_epsilon": mmd_epsilon,
+            "mmd_passed": bool(mmd_value < mmd_epsilon),
+            "passed": bool(mmd_value < mmd_epsilon),
         },
         {
             "ks_statistics": ks_statistics,
@@ -200,15 +208,23 @@ def sparsity_statistics(
     threshold: float = 0.0,
     alpha: float = 0.05,
 ) -> tuple[dict[str, tp.Any], dict[str, np.ndarray]]:
-    """Compute sparsity statistics comparing dense `h` and SAE latents `z`."""
+    """
+    Compute sparsity statistics comparing dense `h` and SAE latents `z`.
+
+    Hoyer sparsity is the primary measure for hypothesis testing. L0, active
+    feature share, and entropy are reported as diagnostics only.
+    """
     valid_original = flatten_valid_tokens(original, mask)
     valid_latent = flatten_valid_tokens(latent, mask)
 
     z_hoyer = hoyer_per_row(valid_latent)
     h_hoyer = hoyer_per_row(valid_original)
     n = min(len(z_hoyer), len(h_hoyer))
-    hoyer_test = stats.wilcoxon(z_hoyer[:n] - h_hoyer[:n], alternative="greater") if n > 1 else None
+    hoyer_delta = z_hoyer[:n] - h_hoyer[:n]
+    hoyer_test = stats.wilcoxon(hoyer_delta, alternative="greater") if n > 1 else None
     latent_sparsity = sae.sparsity_metrics(valid_latent.to(next(sae.parameters()).device), threshold=threshold)
+    mean_hoyer_delta = float(np.mean(hoyer_delta)) if n > 0 else np.nan
+    hoyer_pvalue = None if hoyer_test is None else float(hoyer_test.pvalue)
 
     return (
         {
@@ -216,13 +232,20 @@ def sparsity_statistics(
             "z_active_feature_share": float(latent_sparsity["active_feature_share"].item()),
             "z_hoyer": float(np.mean(z_hoyer)),
             "h_hoyer": float(np.mean(h_hoyer)),
+            "mean_hoyer_delta": mean_hoyer_delta,
             "z_normalized_entropy": float(latent_sparsity["normalized_entropy"].item()),
-            "hoyer_wilcoxon_pvalue": None if hoyer_test is None else float(hoyer_test.pvalue),
-            "passed": bool(np.mean(z_hoyer) > np.mean(h_hoyer) and (hoyer_test is None or hoyer_test.pvalue < alpha)),
+            "hoyer_wilcoxon_statistic": None if hoyer_test is None else float(hoyer_test.statistic),
+            "hoyer_wilcoxon_pvalue": hoyer_pvalue,
+            "passed": bool(
+                mean_hoyer_delta > 0.0
+                and hoyer_pvalue is not None
+                and hoyer_pvalue < alpha
+            ),
         },
         {
             "z_hoyer": z_hoyer,
             "h_hoyer": h_hoyer,
+            "hoyer_delta": hoyer_delta,
         },
     )
 
