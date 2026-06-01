@@ -1,8 +1,14 @@
 torch==2.4.1
 scikit-learn==1.4.0
 transformers==4.44.2
+fastapi==0.113.0
+pydantic==2.9.0
+uvicorn==0.30.6
 langchain==0.3.28
 langchain_community==0.3.23
+langchain-openai==0.3.28
+python-dotenv==1.0.1
+tqdm==4.66.4
 pandas==2.2.2
 scipy==1.12.0
 matplotlib==3.8.4
